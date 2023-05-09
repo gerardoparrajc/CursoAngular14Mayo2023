@@ -9,4 +9,15 @@ export class AppComponent {
   pintarRojo = true;
   pintarFondoAzul = 3 < 7;
   backgroundColor = false;
+
+  contador: number = 0;
+
+  onClick() {
+    this.contador++;
+
+    if (this.contador > 10) {
+      this.contador = 10;
+    }
+  }
+
 }

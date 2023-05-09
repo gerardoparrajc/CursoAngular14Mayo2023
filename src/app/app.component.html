@@ -1,3 +1,7 @@
 <h1 appGatoBotas appGreenBackgroundOnClick appDestacar="Angular">Este es el curso de Angular 14</h1>
 <h2 [ngClass]="{ 'colorRojo': pintarRojo, 'fondoAzul': pintarFondoAzul }">Este es el subtítulo</h2>
 <h3 [ngStyle]="{'background-color': backgroundColor ? 'green' : 'yellow'}" >Este es el sub-sub-título</h3>
+
+<!-- ngClass: contador de 0 a 5 esté en verde. De 5 a 7 en amarillo. De 8 a 10 en rojo -->
+<p>Cuenta: {{ contador }}</p>
+<button (click)="onClick()">Incrementar contador</button>
