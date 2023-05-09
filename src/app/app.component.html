@@ -1,8 +1,28 @@
 <mat-toolbar color="primary">
   <mat-toolbar-row>
+    <button (click)="sidenav.toggle()">Menu</button>
     <span>Título de la aplicacion</span>
     <span class="spacer"></span>
     <button>Botón 1</button>
     <button>Botón 2</button>
   </mat-toolbar-row>
 </mat-toolbar>
+
+<mat-sidenav-container>
+  <mat-sidenav #sidenav opened>
+    <ul>
+      <li>
+        <a href="#">Google</a>
+      </li>
+      <li>
+        <a href="#">Facebook</a>
+      </li>
+      <li>
+        <a href="#">Apple</a>
+      </li>
+    </ul>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <h1>Zona de contenido</h1>
+  </mat-sidenav-content>
+</mat-sidenav-container>
