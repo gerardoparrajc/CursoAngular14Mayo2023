@@ -6,11 +6,20 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  pintarRojo = true;
+  pintarRojo = false;
   pintarFondoAzul = 3 < 7;
   backgroundColor = false;
 
   contador: number = 0;
+
+  elementos = [
+    'Elemento 1',
+    'Elemento 2',
+    'Elemento 3',
+    'Elemento 4',
+    'Elemento 5',
+    'Elemento 6'
+  ];
 
   onClick() {
     this.contador++;

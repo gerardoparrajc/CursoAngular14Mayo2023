@@ -1,4 +1,4 @@
-<h1 appGatoBotas appGreenBackgroundOnClick appDestacar="Angular">Este es el curso de Angular 14</h1>
+<h1 *ngIf="contador < 5" appGatoBotas appGreenBackgroundOnClick appDestacar="Angular">Este es el curso de Angular 14</h1>
 <h2 [ngClass]="{ 'colorRojo': pintarRojo, 'fondoAzul': pintarFondoAzul }">Este es el subtítulo</h2>
 <h3 [ngStyle]="{'background-color': backgroundColor ? 'green' : 'yellow'}" >Este es el sub-sub-título</h3>
 
@@ -10,3 +10,18 @@
 }">Cuenta: {{ contador }}</p>
 <button (click)="onClick()">Incrementar contador</button>
 
+<!-- Variables internas del bucle:
+  first -> booleano que indica si es el primer item del bucle
+  last -> booleano que indica si es el último item del bucle
+  even -> booleano que indica si es el item par del bucle
+  odd -> para los impares
+-->
+<ul>
+  <li *ngFor="let el of elementos; let i = index; let total = count; let esPrimero = first" >{{ i }} de {{ total }}. {{ el }} {{ esPrimero ? ' Es el primero' : '' }}</li>
+</ul>
+
+<div [ngSwitch]="contador">
+  <p *ngSwitchCase="3">El valor es 3</p>
+  <p *ngSwitchCase="5">El valor es 5</p>
+  <p *ngSwitchDefault>El valor no es ni 3 ni 5</p>
+</div>
