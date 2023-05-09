@@ -16,19 +16,25 @@
 
 <mat-sidenav-container>
   <mat-sidenav #sidenav opened>
-    <ul>
-      <li>
-        <a href="#">Google</a>
-      </li>
-      <li>
-        <a href="#">Facebook</a>
-      </li>
-      <li>
-        <a href="#">Apple</a>
-      </li>
-    </ul>
+    <mat-nav-list>
+      <a mat-list-item href="#">Google</a>
+      <a mat-list-item href="#">Facebook</a>
+      <a mat-list-item href="#">Apple</a>
+    </mat-nav-list>
   </mat-sidenav>
   <mat-sidenav-content>
-    <h1>Zona de contenido</h1>
+    <h1>Formulario</h1>
+    <form>
+      <mat-form-field>
+        <mat-label>Nombre:</mat-label>
+        <input matInput type="text" placeholder="Nombre" />
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label>Edad:</mat-label>
+        <input matInput type="number" />
+      </mat-form-field>
+
+      <button mat-raised-button color="accent">Enviar</button>
+    </form>
   </mat-sidenav-content>
 </mat-sidenav-container>
